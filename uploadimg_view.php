@@ -42,7 +42,7 @@ $multibyte = (isset($lang_common['lang_multibyte']) && $lang_common['lang_multib
 
 
 
-$page_title = pun_htmlspecialchars($pun_config['o_board_title']).' / '.$lang_uploadimg['Upload image'];
+$page_title = array(pun_htmlspecialchars($pun_config['o_board_title']).' / '.$lang_uploadimg['Upload image']);
 
 
 
