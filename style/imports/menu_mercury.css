@@ -1,0 +1,61 @@
+html>body #menugauche {
+  position: fixed;
+}
+ 
+#menugauche {
+  position: fixe;
+  top: 0px;
+  left: -5px;
+  float: left;
+  width: 135px;
+  padding: 0.2em 0.5em 0 0;
+  background: #383838;
+  border: 1px solid #565656;
+  border-radius: 5px;
+  margin: 4px 0 0 1em;
+  font: 70% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+  overflow: auto;
+  max-height: 95%;
+}
+ 
+#menugauche ul {
+  line-height: 1.5em;
+  list-style-type: square;
+  list-style-image: none;
+  margin: 0 0 0.3em 0.5em;
+  padding: 0 0 0 0.7em;
+  color: #d4d4d4; /*__text_alt__; du wiki */
+}
+ 
+#menugauche a:link, #menugauche a:visited {
+  color: #f6b620;
+  text-decoration: none;
+}
+ 
+#menugauche a:hover {
+  color: #ffee40;
+  text-decoration: underline;
+}
+ 
+#menugauche hr {
+  border: 0;
+  border-top: 1px solid #565656;
+  text-align: center;
+  height: 0;
+  margin:0 0 0.2em 0;
+}
+ 
+#menugauche p {
+  margin: 0.2em 0 0 0.2em;
+}
+ 
+#menugauche #searche {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+ 
+#menugauche img {
+  margin: 2px;
+  padding: 0;
+  border: 0;
