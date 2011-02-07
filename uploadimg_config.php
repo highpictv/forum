@@ -7,9 +7,9 @@
 $idir = "uploads/";   // Path To Images Directory
 $tdir = "uploads/thumbs/";   // Path To Thumbnails Directory
 
-$twidth = "150";   // Maximum Width For Thumbnail Images - default = 150
-$theight = "150";   // Maximum Height For Thumbnail Images - default = 150
-$size_limit = "yes"; // **** if "yes" there will be a file size limit for uploaded files
+$twidth = "200";   // Maximum Width For Thumbnail Images - default = 150
+$theight = "200";   // Maximum Height For Thumbnail Images - default = 150
+$size_limit = "no"; // **** if "yes" there will be a file size limit for uploaded files
 $limit_size = "200"; // file size limit in KB - default = 200
 
 $allow_resize_option = "1"; // allow = 1 ; disallow = 0
@@ -40,6 +40,18 @@ $Allow_Uploads = array();
 $Allow_Uploads[] = "Administrateurs";
 $Allow_Uploads[] = "Moderateurs";
 $Allow_Uploads[] = "Membres";
+$Allow_Uploads[] = "Membres projet Livre MUL";
+$Allow_Uploads[] = "Membres projet Association MUL";
+$Allow_Uploads[] = "Membres projet Livre + Association MUL";
+$Allow_Uploads[] = "Membres developpement - programmation";
+$Allow_Uploads[] = "Jury concours photo impair";
+$Allow_Uploads[] = "Organisation CdB et Developpement - programmation";
+$Allow_Uploads[] = "Organisation CdB";
+$Allow_Uploads[] = "Doit se calmer";
+$Allow_Uploads[] = "Exclu forum Achat-Vente-Don-Troc";
+$Allow_Uploads[] = "Jury concours photo pair";
+$Allow_Uploads[] = "Jury concours photo pair et impair";
+$Allow_Uploads[] = "Exclu de tout sauf des achats-ventes";
 
 /*
 The permission setting allows you to have full control over who can upload images.
@@ -84,9 +96,20 @@ $Allow_Delete = array();
 //
 
 $Allow_Delete[] = "Administrateurs";
-//$Allow_Delete[] = "Moderateurs";
-//$Allow_Delete[] = "Uploaders";
-//$Allow_Delete[] = "Membres";
+$Allow_Delete[] = "Moderateurs";
+$Allow_Delete[] = "Membres";
+$Allow_Delete[] = "Membres projet Livre MUL";
+$Allow_Delete[] = "Membres projet Association MUL";
+$Allow_Delete[] = "Membres projet Livre + Association MUL";
+$Allow_Delete[] = "Membres developpement - programmation";
+$Allow_Delete[] = "Jury concours photo impair";
+$Allow_Delete[] = "Organisation CdB et Developpement - programmation";
+$Allow_Delete[] = "Organisation CdB";
+$Allow_Delete[] = "Doit se calmer";
+$Allow_Delete[] = "Exclu forum Achat-Vente-Don-Troc";
+$Allow_Delete[] = "Jury concours photo pair";
+$Allow_Delete[] = "Jury concours photo pair et impair";
+$Allow_Delete[] = "Exclu de tout sauf des achats-ventes";
 
 
 ?>
