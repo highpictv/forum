@@ -1,0 +1,62 @@
+<?php
+
+// Language definitions used in search.php
+$lang_search = array(
+ 
+// The search form
+'User search'			=>	'Rechercher un utilisateur',
+'No search permission'		=>	'Vous ne pouvez pas effectuer de recherche, vous n\'avez pas les permissions requises',
+'Search flood'			=>	'Vous devez patienter au minimum %s secondes avant d\'effectuer une nouvelle recherche. Veuillez patienter un moment et essayer à nouveau.',
+'Search'			=>	'Rechercher',
+'Search criteria legend'	=>	'Choisissez vos critères de recherche',
+'Search info'			=>	'Pour effectuer une recherche par mots-clés, indiquez le ou les termes à rechercher en les séparant par des espaces. Utilisez AND, OR, NOT pour affiner votre recherche. Pour rechercher par auteur, saisissez le nom d\'utilisateur auquel les messages appartiennent. Utilisez le joker * pour des recherches sur des fragments de mot.',
+'Keyword search'		=>	'Mots-clés',
+'Author search'			=>	'Rechercher un auteur',
+'Search in legend'		=>	'Indiquez où la recherche doit s\'effectuer',
+'Search in info'		=>	'Choisissez le forum dans lequel vous souhaitez lancer votre recherche et indiquez si vous souhaitez rechercher uniquement dans les sujets des discussions ou dans les textes des messages ou bien dans les deux à la fois.',
+'Forum search'			=>	'Forum',
+'All forums'			=>	'Tous les forums',
+'Search in'			=>	'Rechercher dans&#160;…',
+'Message and subject'		=>	'Le texte du message et du sujet',
+'Message only'			=>	'Le texte du message seulement',
+'Topic only'			=>	'Le texte du sujet seulement',
+'Sort by'			=>	'Trier par&#160;…',
+'Sort order'			=>	'Ordre&#160;…',
+'Search results legend'		=>	'Sélectionnez le mode d\'affichage des résultats',
+'Search results info'		=>	'Vous pouvez choisir le mode de classement et d\'affichage des résultats.',
+'Sort by post time'		=>	'Date du message',
+'Sort by author'		=>	'Auteur',
+'Sort by subject'		=>	'Sujet',
+'Sort by forum'			=>	'Forum',
+'Ascending'			=>	'Croissant',
+'Descending'			=>	'Décroissant',
+'Show as'			=>	'Afficher les&#160;…',
+'Show as topics'		=>	'Discussions',
+'Show as posts'			=>	'Messages',
+ 
+// Results
+'Search results'		=>	'Résultats de la recherche',
+'Search topics'			=>	'Discussions de la recherche',
+'Search posts'			=>	'Messages de la recherche',
+'Quick search show_new'		=>	'Nouveaux',
+'Quick search show_recent'	=>	'Actives',
+'Quick search show_unanswered'	=>	'Sans réponse',
+'Quick search show_replies'	=>	'Les vôtres',
+'Quick search show_user_topics'	=>	'De %s',
+'Quick search show_user_posts'	=>	'De %s',
+'Quick search show_subscriptions'       =>	'Suivies par %s',
+'By keywords'			=>	'Contenant le(s) mot(s)-clé(s) «&#160;%s&#160;»',
+'By user'			=>	'Contenant des messages de %s',
+'By both'			=>	'Contenant le(s) mot(s)-clé(s) «&#160;%s&#160;» dans les messages de %s',
+'No terms'			=>	'Vous devez saisir au moins un mot-clé et/ou un auteur à rechercher.',
+'No hits'			=>	'Désolé, aucun résultat n\'a été trouvé pour votre recherche.',
+'No user posts'			=>	'Il n\'y a pas de message de cet utilisateur dans ce forum.',
+'No user topics'		=>	'Il n\'y a pas de discussion de cet utilisateur dans ce forum.',
+'No subscriptions'		=>	'Cet utilisateur ne suit actuellement aucune discussion.',
+'No new posts'			=>	'Il n\'y a pas de discussion avec de nouveaux messages depuis votre dernière visite.',
+'No recent posts'		=>	'Il n\'y a pas de discussion avec de nouveaux messages depuis les 24 dernières heures.',
+'No unanswered'			=>	'Il n\'y a pas de message sans réponse dans ce forum.',
+'Go to post'			=>	'Aller au message',
+'Go to topic'			=>	'Aller à la discussion'
+
+);
