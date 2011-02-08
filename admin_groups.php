@@ -199,7 +199,7 @@ if (isset($_POST['add_group']) || isset($_GET['edit_group']))
 <?php endif; ?>								<tr>
 									<th scope="row"><?php echo $lang_admin_groups['Post flood label'] ?></th>
 									<td>
-										<input type="text" name="post_flood" size="5" maxlength="4" value="<?php echo $group['g_post_flood'] ?>" tabindex="24" />
+										<input type="text" name="post_flood" size="5" maxlength="5" value="<?php echo $group['g_post_flood'] ?>" tabindex="24" />
 										<span><?php echo $lang_admin_groups['Post flood help'] ?></span>
 									</td>
 								</tr>
