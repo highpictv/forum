@@ -12,7 +12,7 @@ $lang_common = array(
 'lang_thousands_sep'            =>        ' ',
 
 // Notices
-'Bad request'			=>	'Erreur. Le lien que vous avez suivi est incorrect ou périmé.',
+'Bad request'			=>	'Erreur, la page ne peut être affichée. Le lien suivi est incorrect/périmé ou la page demandée est en accès restreint.',
 'No view'			=>	'Vous n\'êtes pas autorisé(e) à visiter ces forums.',
 'No permission'			=>	'Vous n\'êtes pas autorisé(e) à afficher cette page.',
 'Bad referrer'			=>	'Mauvais HTTP_REFERER. Vous avez été renvoyé(e) vers cette page par une source inconnue ou interdite. Si le problème persiste, assurez-vous que le champ «&#160;URL de base&#160;» de la page Administration&#160;» Options est correctement renseigné et que vous vous rendez sur ces forums en utilisant cette URL. Vous pourrez trouver davantage d\'informations dans la documentation de FluxBB.',
@@ -50,7 +50,7 @@ $lang_common = array(
 'Send email'			=>	'Envoyer un e-mail',
 'Moderated by'			=>	'Modéré par',
 'Registered'			=>	'Date d\'inscription',
-'Subject'			=>	'Sujet',
+'Subject'			=>	'Veuillez indiquer un titre clair reflétant le contenu du message',
 'Message'			=>	'Message',
 'Topic'				=>	'Discussion',
 'Forum'				=>	'Forum',
