@@ -548,7 +548,10 @@ else if (isset($_POST['merge_topics']) || isset($_POST['merge_topics_comply']))
 
 		// Update topic
 		$db->query('UPDATE '.$db->prefix.'topics SET num_replies='.$num_replies.', last_post='.$last_post.', last_post_id='.$last_post_id.', last_poster=\''.$db->escape($last_poster).'\' WHERE id='.$merge_to_tid) or error('Unable to update topic', __FILE__, __LINE__, $db->error());
-
+		foreach($topics as $topic) {
+            $db->query('UPDATE '.$db->prefix.'posts SET message=REPLACE(message,\''.$config['o_base_url'].'/viewtopic.php?id='.$topic.'\', \''.$config['o_base_url'].'/viewtopic.php?id='.$merge_to_tid.'\')') or error('Unable to update topic', __FILE__, __LINE__, $db->error());
+		}
+		
 		// Update the forum FROM which the topic was moved and redirect
 		update_forum($fid);
 		redirect('viewforum.php?id='.$fid, $lang_misc['Merge topics redirect']);
