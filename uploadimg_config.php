@@ -40,18 +40,17 @@ $Allow_Uploads = array();
 $Allow_Uploads[] = "Administrateurs";
 $Allow_Uploads[] = "Moderateurs";
 $Allow_Uploads[] = "Membres";
-$Allow_Uploads[] = "Membres projet Livre MUL";
-$Allow_Uploads[] = "Membres projet Association MUL";
-$Allow_Uploads[] = "Membres projet Livre + Association MUL";
-$Allow_Uploads[] = "Membres developpement - programmation";
 $Allow_Uploads[] = "Jury concours photo impair";
-$Allow_Uploads[] = "Organisation CdB et Developpement - programmation";
-$Allow_Uploads[] = "Organisation CdB";
 $Allow_Uploads[] = "Doit se calmer";
 $Allow_Uploads[] = "Exclu forum Achat-Vente-Don-Troc";
 $Allow_Uploads[] = "Jury concours photo pair";
 $Allow_Uploads[] = "Jury concours photo pair et impair";
-$Allow_Uploads[] = "Exclu de tout sauf des achats-ventes";
+$Allow_Uploads[] = "En discussion avec les modos ET membre";
+$Allow_Uploads[] = "Membre des projets de l'assocation";
+$Allow_Uploads[] = "Membre des projets du site";
+$Allow_Uploads[] = "Membre des projets du site + association";
+$Allow_Uploads[] = "Membre du comite directeur ou invite";
+$Allow_Uploads[] = "Membre du bureau de l'association";
 
 /*
 The permission setting allows you to have full control over who can upload images.
