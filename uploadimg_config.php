@@ -40,11 +40,8 @@ $Allow_Uploads = array();
 $Allow_Uploads[] = "Administrateurs";
 $Allow_Uploads[] = "Moderateurs";
 $Allow_Uploads[] = "Membres";
-$Allow_Uploads[] = "Jury concours photo impair";
 $Allow_Uploads[] = "Doit se calmer";
 $Allow_Uploads[] = "Exclu forum Achat-Vente-Don-Troc";
-$Allow_Uploads[] = "Jury concours photo pair";
-$Allow_Uploads[] = "Jury concours photo pair et impair";
 $Allow_Uploads[] = "En discussion avec les modos ET membre";
 $Allow_Uploads[] = "Membre des projets de l'assocation";
 $Allow_Uploads[] = "Membre des projets du site";
@@ -94,20 +91,17 @@ $Allow_Delete = array();
 // $Allow_Delete[] = "MY_USERGROUP";
 //
 
-$Allow_Uploads[] = "Administrateurs";
-$Allow_Uploads[] = "Moderateurs";
-$Allow_Uploads[] = "Membres";
-$Allow_Uploads[] = "Jury concours photo impair";
-$Allow_Uploads[] = "Doit se calmer";
-$Allow_Uploads[] = "Exclu forum Achat-Vente-Don-Troc";
-$Allow_Uploads[] = "Jury concours photo pair";
-$Allow_Uploads[] = "Jury concours photo pair et impair";
-$Allow_Uploads[] = "En discussion avec les modos ET membre";
-$Allow_Uploads[] = "Membre des projets de l'assocation";
-$Allow_Uploads[] = "Membre des projets du site";
-$Allow_Uploads[] = "Membre des projets du site + association";
-$Allow_Uploads[] = "Membre du comite directeur ou invite";
-$Allow_Uploads[] = "Membre du bureau de l'association";
+$Allow_Delete[] = "Administrateurs";
+$Allow_Delete[] = "Moderateurs";
+$Allow_Delete[] = "Membres";
+$Allow_Delete[] = "Doit se calmer";
+$Allow_Delete[] = "Exclu forum Achat-Vente-Don-Troc";
+$Allow_Delete[] = "En discussion avec les modos ET membre";
+$Allow_Delete[] = "Membre des projets de l'assocation";
+$Allow_Delete[] = "Membre des projets du site";
+$Allow_Delete[] = "Membre des projets du site + association";
+$Allow_Delete[] = "Membre du comite directeur ou invite";
+$Allow_Delete[] = "Membre du bureau de l'association";
 
 
 ?>
