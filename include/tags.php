@@ -10,16 +10,14 @@
  *    If you don't know what that means take a look at:
  *       http://www.gnu.org/licenses/gpl-3.0.html
  *
- * @version 0.5
- * @date 2010-11-06
+ * @version 0.8
+ * @date 2011-03-22
  * @author Charlie Merland
  */
 class tagManager
 {
-    // will contain basic tags
-    private $basic_tags;
-    // will contain more specific tags
-    private $specific_tags;
+    // will contain all tags
+    private $tags;
     // will contain the post's subject
     private $subject;
     // will contain the tags used in subject
@@ -43,57 +41,64 @@ class tagManager
     {
         // forum containing our post
         $this->forum_id = $forum_id;
-        // forums allowed to show specific tags
-        $this->specific_forum = array(11);
-        // forums to show basic tags
-        $this->basic_forum = array(3,5,11,14,20,30);
-        // debug
-        //echo "<!-- 0/ tags.php : ".$subject." - ".$tag1." - ".$tag2." -->\n";
+        
+        // will contain all tag lists
+        $this->tags = array();
     
+        // topic's subject
         $this->subject = $subject;
     
         // collect tags used
         $this->tag[1] = $tag1;
         $this->tag[2] = $tag2;
         
-        // debug
-        //echo "<!-- tags.php : ".$this->subject." - ".$this->tag['types']." - ".$this->tag['tags']." -->\n";
-
-        $this->specific_tags = array("[Achat]" ,
-                    "[Acheté]" ,
-                    "[Vente]" ,
-                    "[Vendu]" ,
-                    "[Don]",
-                    "[Donné]",
-                    "[Troc]",
-                    "[Troqué]",
-                    "[En cours]");
-    
-        $this->basic_tags = array(
-                    "[Abri]",
-                    "[Alimentation]",
-                    "[Autre]",
-                    "[Bâtons]",
-                    "[Cartographie]",
-                    "[Chaussures]",
-                    "[Couchage]",
-                    "[Couteau]",
-                    "[Couture]",
-                    "[Electricité]",
-                    "[Hamac]",
-                    "[Hygiène]",
-                    "[Lampe]",
-                    "[Liste prévisionnelle]",
-                    "[Matelas]",
-                    "[Matériaux]",
-                    "[Montre]",
-                    "[Photo]",
-                    "[Popote]",
-                    "[Questions multiples]",
-                    "[Réchaud]",
-                    "[Sac à dos]",
-                    "[Sursac]",
-                    "[Vêtements]");
+        /********************************************************************/
+        /*                        Add tag lists here                        */
+        /********************************************************************/
+        $achat_vente = array("[Achat]" ,
+                             "[Acheté]" ,
+                             "[Vente]" ,
+                             "[Vendu]" ,
+                             "[Don]",
+                             "[Donné]",
+                             "[Troc]",
+                             "[Troqué]",
+                             "[En cours]");
+        
+        $tags_basiques = array("[Abri]",
+                               "[Alimentation]",
+                               "[Autre]",
+                               "[Bâtons]",
+                               "[Cartographie]",
+                               "[Chaussures]",
+                               "[Couchage]",
+                               "[Couteau]",
+                               "[Couture]",
+                               "[Electricité]",
+                               "[Hamac]",
+                               "[Hygiène]",
+                               "[Lampe]",
+                               "[Liste prévisionnelle]",
+                               "[Matelas]",
+                               "[Matériaux]",
+                               "[Montre]",
+                               "[Photo]",
+                               "[Popote]",
+                               "[Questions multiples]",
+                               "[Réchaud]",
+                               "[Sac à dos]",
+                               "[Sursac]",
+                               "[Vêtements]");
+        
+        $conseils = array("[Récit/liste]");
+        
+        // main tags list: contains association between forum ids and various tag lists
+        $this->tags = array( 7 => $conseils,
+							 3 => $tags_basiques,
+							 5 => $tags_basiques,
+							 20 => $tags_basiques,
+							 30 => $tags_basiques,
+                             11 => array($achat_vente, $tags_basiques));
         
         // showing lists
         $this->showTagsList();
@@ -131,9 +136,6 @@ class tagManager
      */
     public function showTagsList()
     {
-        // debug
-        //echo "<!-- 1/ tags.php : ".$this->subject." - ".$this->tag['types']." - ".$this->tag['tags']." -->\n";
-        
         // finding all tags in the subject
         preg_match_all("(\[(.*?)\])",$this->subject,$matches);
         
@@ -143,30 +145,32 @@ class tagManager
         if($this->tag[2] == null)
             $this->tag[2] = $matches[0][1];
         
-        // debug
-        //echo "<!-- 2/ tags.php : ".$this->subject." - ".$this->tag[1]." - ".$this->tag[2]." -->\n";
+        // will contain all usable tags
+        $list = $this->tags;
+        // will contain key: which tag list do we use?
+        $cle = $this->forum_id;
 
         // Is current forum allowed to use basic tags
-        $basic = in_array($this->forum_id,$this->basic_forum);
-        // Is current forum allowed to use specific tags
-        $spec = in_array($this->forum_id,$this->specific_forum);
-        // debug
-        //echo "<!-- basic: $basic - spec: $spec -->\n";
+        $use_tag = in_array($this->forum_id,array_keys($this->tags));
         
-        if($spec && $basic)
+        if($use_tag)
         {
-            printf("<select name=\"tag1\">\n");
-            $this->generatOptionTags($this->specific_tags,$this->tag[1]);
-            printf("</select>\n");
-            printf("<select name=\"tag2\">\n");
-            $this->generatOptionTags($this->basic_tags,$this->tag[2]);
-            printf("</select>\n");
-        }
-        else if($basic)
-        {
-            printf("<select name=\"tag2\">\n");
-            $this->generatOptionTags($this->basic_tags,$this->tag[1]);
-            printf("</select>\n");
+            if(is_array($list[$cle]) && count($list[$cle])==2)
+            {
+                printf("<select name=\"tag1\">\n");
+                $this->generatOptionTags($list[$cle][0],$this->tag[1]);
+                printf("</select>\n");
+                printf("<select name=\"tag2\">\n");
+                $this->generatOptionTags($list[$cle][1],$this->tag[2]);
+                printf("</select>\n");
+                
+            }
+            else
+            {
+                printf("<select name=\"tag1\">\n");
+                $this->generatOptionTags($list[$cle],$this->tag[1]);
+                printf("</select>\n");
+            }
         }
     }
     
@@ -181,6 +185,7 @@ class tagManager
     private function generatOptionTags($list,$test)
     {
         printf("<option value=\"\">- Choisir un tag -</option>\n");
+        print_r($list);
         
         foreach($list as $element)
         {
