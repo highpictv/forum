@@ -57,6 +57,21 @@ curobj.q.value="site:"+domainroot+" "+curobj.qfront.value
 </li>
 </ul>
 
+<p>
+
+<img src="/wiki/lib/exe/fetch.php?w=25&amp;media=menu:minilogolbleu.png" class="media" alt="" width="25"><strong><a href="/wiki/doku.php?id=association_rl" class="wikilink1" title="association_rl">L'Association</a> </strong>
+
+</p>
+<hr>
+<ul>
+<li class="level1"><div class="li"> <a href="/wiki/doku.php?id=association_adhesion" class="wikilink1" title="association_adhesion">Adhésion à l'asso</a> </div>
+</li>
+<li class="level2"><div class="li"> <a href="/wiki/doku.php?id=camps_de_base" class="wikilink1" title="camps_de_base">Camps de base</a></div>
+</li>
+<li class="level2"><div class="li"> <a href="http://www.randonner-leger.org/wiki/doku.php?id=camp_de_base_2011" class="wikilink1" title="camps_de_base">Inscription été 2011</a></div>
+</li>
+</ul>
+
 <p class=" ">
 
 <img src="/wiki/lib/exe/fetch.php?w=20&amp;media=menu:wiki.png" class="media" alt="" width="20"><strong><a href="/wiki/doku.php?id=accueil_du_wiki" class="wikilink1" title="accueil_du_wiki">Wiki</a> </strong>
