@@ -57,6 +57,8 @@ class tagManager
         /********************************************************************/
         $achat_vente = array("[Achat]" ,
                              "[Acheté]" ,
+                             "[Annulé]" ,
+                             "[Bon plan hors RL]" ,
                              "[Vente]" ,
                              "[Vendu]" ,
                              "[Don]",
@@ -90,7 +92,7 @@ class tagManager
                                "[Sursac]",
                                "[Vêtements]");
         
-        $conseils = array("[Récit/liste]");
+        $conseils = array("[Récit + liste]");
         
         // main tags list: contains association between forum ids and various tag lists
         $this->tags = array( 7 => $conseils,
